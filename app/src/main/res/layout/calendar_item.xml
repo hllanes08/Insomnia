@@ -13,6 +13,7 @@
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:gravity="center_vertical"
+           android:textColor="@color/colorPrimaryDark"
            android:padding="5dp"
            android:inputType="textPersonName"
            android:text="Calendar Name" />

@@ -21,17 +21,23 @@ class CalendarRetriever {
     private var service:CalendarApi
 
     init {
-        var interceptor = Interceptor { chain ->
-            val request = chain?.request()?.newBuilder()?.addHeader("Authorization", "")?.build();
-            chain?.proceed(request)
-        }
 
         val httpClient = OkHttpClient.Builder()
-        httpClient.addInterceptor(interceptor)
+        var client = httpClient
+                .addInterceptor { chain ->
+                    val request = chain.request()
+                    val newrequest = request.newBuilder()
+                            .addHeader("Authorization", "")
+                            .addHeader("Accept","application/json")
+                            .build()
+                    chain.proceed(newrequest)
+                }
+                .build()
         var retrofit = Retrofit.Builder().
+                //baseUrl("http://10.0.2.2:3000/api/v1/").
                 baseUrl("http://ec2-52-89-198-196.us-west-2.compute.amazonaws.com/api/v1/").
                 addConverterFactory(GsonConverterFactory.create()).
-                client(httpClient.build()).
+                client(client).
                 build()
 
         service = retrofit.create(CalendarApi::class.java)

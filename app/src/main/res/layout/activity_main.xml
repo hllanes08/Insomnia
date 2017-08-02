@@ -21,8 +21,10 @@
     </android.support.design.widget.AppBarLayout>
 
     <android.support.v7.widget.RecyclerView
+        android:id="@+id/recicleView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/recicleView"/>
+        android:layout_height="455dp"
+        android:paddingLeft="30dp"
+        android:paddingTop="70dp" />
 
 </android.support.design.widget.CoordinatorLayout>

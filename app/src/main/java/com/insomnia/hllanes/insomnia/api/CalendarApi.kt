@@ -13,7 +13,6 @@ import java.lang.reflect.Type
 interface CalendarApi {
 
     //var token:String
-    @Headers("Content-Type: application/json")
     @GET("calendar")
     fun getCalendars() : Call<CalendarList>
 

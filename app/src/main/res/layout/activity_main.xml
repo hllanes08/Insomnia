@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#161A21"
     tools:context="com.insomnia.hllanes.insomnia.MainActivity">
 
     <android.support.design.widget.AppBarLayout
@@ -15,7 +16,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="#161A21"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
@@ -25,6 +26,7 @@
         android:layout_width="match_parent"
         android:layout_height="455dp"
         android:paddingLeft="30dp"
-        android:paddingTop="70dp" />
+        android:paddingTop="70dp"
+        />
 
 </android.support.design.widget.CoordinatorLayout>

@@ -27,7 +27,7 @@ class CalendarRetriever {
                 .addInterceptor { chain ->
                     val request = chain.request()
                     val newrequest = request.newBuilder()
-                            .addHeader("Authorization", "")
+                            .addHeader("Authorization", "qzz3oPxLJXLTPcmGmQGD")
                             .addHeader("Accept","application/json")
                             .build()
                     chain.proceed(newrequest)
